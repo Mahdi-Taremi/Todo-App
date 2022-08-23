@@ -1,0 +1,16 @@
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+}
+ul {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+ul li {
+  display: inline;
+  margin-right: 15px;
+}
