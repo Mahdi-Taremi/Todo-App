@@ -1,8 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 50% auto;
-  border-radius: 5px ;
-
+  border-radius: 5px;
 }
 .col {
   padding: 15px;
@@ -18,18 +17,19 @@ input.text {
   padding: 10px;
   width: 80%;
   margin-bottom: 15px;
-  border-radius: 5px ;
-
+  border-radius: 5px;
 }
 input.btn {
   border: 0;
   display: block;
   padding: 10px 20px;
-  background-color: #94a3b8;
-  border-radius: 5px ;
+  background-color: #2563eb;
+  border-radius: 5px;
 }
 .project-container {
-  background-color: #3fa0e1;
+  background-color: #bfdbfe;
+  color: black;
   padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
