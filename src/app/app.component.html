@@ -1,9 +1,18 @@
 <ul>
   <li>
-    <a routerLink="">Home</a>
+    <a
+      class="navigation-a"
+      routerLink=""
+      routerLinkActive="active-route"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><mat-icon style="color: black">add_home</mat-icon> Home</a
+    >
   </li>
   <li>
-    <a routerLink="projects">Projects</a>
+    <a class="navigation-a" routerLink="done" routerLinkActive="active-route"
+      ><mat-icon style="color: black"> library_add_check</mat-icon>Done</a
+    >
   </li>
 </ul>
+
 <router-outlet></router-outlet>

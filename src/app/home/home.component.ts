@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   counter: number = 0;
-  projectText: string = 'Angular';
+  projectText: string = '';
   projects: string[] = [];
   constructor() {}
   ngOnInit(): void {
@@ -15,9 +15,13 @@ export class HomeComponent implements OnInit {
   }
 
   addTask() {
-    this.projects.push(this.projectText);
-    this.projectText = '';
-    this.counter = this.projects.length;
+    if (!this.projectText) {
+      alert('Plese Type Todo Tasl');
+    } else {
+      this.projects.push(this.projectText);
+      this.projectText = '';
+      this.counter = this.projects.length;
+    }
   }
   // removeTask(i: number) {
   //   this.projects.splice(i, 1);
