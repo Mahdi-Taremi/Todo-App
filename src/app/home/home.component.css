@@ -33,3 +33,6 @@ input.btn {
   cursor: pointer;
   border-radius: 5px;
 }
+.btn-xs {
+  margin-right: 10px;
+}

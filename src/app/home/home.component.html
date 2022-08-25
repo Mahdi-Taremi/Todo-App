@@ -17,19 +17,26 @@
         name="projectname"
         placeholder="Please add Task"
         [(ngModel)]="projectText"
+        #taskInput
       />
       <br />
       <input
         type="submit"
         class="btn btn-primary"
         value="Add Task"
-        (click)="addTask()"
+        (click)="addTask(taskInput)"
       />
     </form>
   </div>
-  <div class="col">
-    <p class="project-container" *ngFor="let item of projects">
-      {{ item }}
-    </p>
+  <div>
+    <div class="col" *ngFor="let item of projects; let id = index">
+      <p class="project-container">{{ id + 1 }}. {{ item.title }}</p>
+      <button class="btn btn-primary btn-xs" (click)="editTask(id)">
+        Edit
+      </button>
+      <button class="btn btn-danger btn-xs" (click)="deleteTask(id)">
+        Delete
+      </button>
+    </div>
   </div>
 </div>
