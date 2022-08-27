@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 interface Task {
   title: string;
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   counter: number = 0;
   projectText: string = '';
   projects: Array<Task> = [];
-  constructor() {}
+  constructor(private ref: ChangeDetectorRef) {}
   ngOnInit(): void {
     this.counter = this.projects.length;
   }
@@ -34,7 +34,9 @@ export class HomeComponent implements OnInit {
     let do_delete = confirm('Are you sure to delete the task?');
     if (do_delete) {
       this.projects.splice(id, 1);
+      // console.log(this.projects);
       this.counter = this.projects.length;
+      this.ref.detectChanges();
     }
   }
   editTask(id: number) {
